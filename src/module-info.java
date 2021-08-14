@@ -1,0 +1,2 @@
+module group_project {
+}
