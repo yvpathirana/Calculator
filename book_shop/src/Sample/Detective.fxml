@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fx:id="scrollDetective" prefHeight="585.0" prefWidth="1050.0" styleClass="transparent" stylesheets="@../Values/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.Detective">
+   <content>
+      <GridPane fx:id="gridDetective" prefHeight="0.0" prefWidth="28.0">
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         </rowConstraints>
+      </GridPane>
+   </content>
+</ScrollPane>

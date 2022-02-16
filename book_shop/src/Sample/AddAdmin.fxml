@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="367.0" prefWidth="500.0" style="-fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.AddAdmin">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="369.0" prefWidth="500.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="500.0" style="-fx-background-color: #0C284D;">
+               <children>
+                  <Label text=" New Admin" textFill="#fcfcf9">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox layoutX="-2.0" layoutY="71.0" prefHeight="205.0" prefWidth="500.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="500.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <Label text="Name :" textFill="#10100f">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="newName" prefHeight="25.0" prefWidth="309.0" promptText="name" style="-fx-background-radius: 10;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="500.0">
+                     <children>
+                        <Label text="User name :" textFill="#1b1b1a">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="newUser" prefHeight="25.0" prefWidth="309.0" promptText="user name" style="-fx-background-radius: 10;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Passward :" textFill="#080808">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <PasswordField fx:id="newPassword" prefHeight="25.0" prefWidth="309.0" promptText="passward" style="-fx-background-radius: 10;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                        </PasswordField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="stateText" layoutX="34.0" layoutY="269.0" prefHeight="30.0" prefWidth="433.0" textFill="#6b290e">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" layoutX="-12.0" layoutY="311.0" prefHeight="59.0" prefWidth="512.0" style="-fx-background-color: #0C284D;">
+               <children>
+                  <Button fx:id="backToLogin" mnemonicParsing="false" onAction="#backToLogin" prefHeight="31.0" prefWidth="83.0" style="-fx-background-color: red; -fx-background-radius: 10;" text=" Back" textFill="#faf6f6">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="addToPanel" mnemonicParsing="false" onAction="#addToPanel" prefHeight="18.0" prefWidth="83.0" style="-fx-background-radius: 10; -fx-background-color: orange;" text="Add" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="499.0" prefHeight="466.0" prefWidth="0.0" style="-fx-background-color: #82EEFD;" />
+   </children>
+</AnchorPane>

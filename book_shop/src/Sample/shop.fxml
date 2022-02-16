@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="656.0" prefWidth="1281.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.shop">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="656.0" prefWidth="235.0" styleClass="right-bar" stylesheets="@../Values/Style.css">
+         <children>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="275.0" styleClass="title-image" stylesheets="@../Values/Style.css">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <ImageView fitHeight="101.0" fitWidth="229.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/titleImage.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <VBox prefHeight="278.0" prefWidth="117.0">
+               <VBox.margin>
+                  <Insets left="45.0" right="45.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="Novels" maxWidth="-Infinity" mnemonicParsing="false" onAction="#Novels" prefHeight="17.0" prefWidth="117.0" styleClass="select" stylesheets="@../Values/Style.css" text="Novels" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ShortStories" prefWidth="120.0" styleClass="select" stylesheets="@../Values/Style.css" text="Short stories" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Fictions" prefWidth="120.0" styleClass="select" stylesheets="@../Values/Style.css" text="Fictions" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Education" prefWidth="120.0" styleClass="select" stylesheets="@../Values/Style.css" text="Detective" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ChildStories" prefWidth="120.0" styleClass="select" stylesheets="@../Values/Style.css" text="Child stories" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Biography" prefWidth="120.0" styleClass="select" stylesheets="@../Values/Style.css" text="Biography" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children></VBox>
+      <HBox alignment="CENTER_LEFT" layoutX="272.0" layoutY="21.0" prefHeight="50.0" prefWidth="566.0" stylesheets="@../Values/Style.css">
+         <children>
+            <TextField fx:id="txtSearch" alignment="CENTER" prefHeight="31.0" prefWidth="453.0" promptText="Type here to search" styleClass="transparent" stylesheets="@../Values/Style.css">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin></TextField>
+            <Button fx:id="search" alignment="CENTER" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#search" prefHeight="30.0" prefWidth="85.0" styleClass="search-button" stylesheets="@../Values/Style.css" text="Search" textFill="#faf6f6" />
+         </children>
+         <styleClass>
+            <String fx:value="search-box" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </HBox>
+      <HBox fx:id="ContentArea" layoutX="235.0" layoutY="71.0" prefHeight="585.0" prefWidth="1050.0" styleClass="transparent" stylesheets="@../Values/Style.css" />
+      <Button fx:id="cart" layoutX="1207.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#cart" prefHeight="30.0" prefWidth="64.0" styleClass="cart" stylesheets="@../Values/Style.css" text="Cart" textFill="#f5f2f2">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Label fx:id="onGoingTotal" layoutX="952.0" layoutY="30.0" prefHeight="41.0" prefWidth="64.0" />
+      <Button fx:id="home" layoutX="1137.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#home" prefHeight="30.0" prefWidth="64.0" styleClass="cart" stylesheets="@../Values/Style.css" text="Home" textFill="#f5f2f2">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="admin" fitHeight="39.0" fitWidth="38.0" layoutX="1091.0" layoutY="27.0" onMouseClicked="#admin" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/admin.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

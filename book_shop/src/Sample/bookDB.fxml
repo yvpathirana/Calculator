@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bookDB" prefHeight="585.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.bookDB">
+   <children>
+      <VBox prefHeight="585.0" prefWidth="525.0" style="-fx-background-color: #0C284D;">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="113.0" prefWidth="525.0" style="-fx-background-color: orange;">
+               <children>
+                  <Label text="Adding Books" textFill="#faf4f4">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" prefHeight="102.0" prefWidth="524.0">
+               <children>
+                  <Label text="Book name :" textFill="#ede2e2">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="bookName" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="270.0" promptText="enter the book name" style="-fx-background-radius: 10;">
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="470.0">
+               <children>
+                  <Label text="Book catogery :" textFill="#f8efef">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="bookType" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#bookType" prefWidth="270.0" promptText="enter the book type" style="-fx-background-radius: 10;">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="470.0">
+               <children>
+                  <Label text="Book  price :" textFill="#f2ebeb">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="bookPrice" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="270.0" promptText="enter the book price" style="-fx-background-radius: 10;">
+                     <HBox.margin>
+                        <Insets left="32.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="470.0">
+               <children>
+                  <Label text="Author :" textFill="#f2ebeb">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="bookAuthor" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="270.0" promptText="enter the author" style="-fx-background-radius: 10;">
+                     <HBox.margin>
+                        <Insets left="65.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="470.0">
+               <children>
+                  <Label text="Stock :" textFill="#f2ebeb">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="bookStock" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="270.0" promptText="enter the book stock" style="-fx-background-radius: 10;">
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="display" prefHeight="72.0" prefWidth="522.0" textFill="WHITE">
+                     <font>
+                        <Font size="29.0" />
+                     </font></Label>
+               </children></HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="525.0" prefHeight="585.0" prefWidth="525.0" style="-fx-background-color: #FFB6C1;">
+         <children>
+            <VBox alignment="CENTER" prefHeight="281.0" prefWidth="548.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <ImageView fx:id="bookImage" fitHeight="230.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="18.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../img/a2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="201.0" prefWidth="486.0">
+               <children>
+                  <TextField fx:id="imagePath" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="350.0" promptText="enter the file path" style="-fx-background-radius: 10;" />
+                  <Button fx:id="browseButton" mnemonicParsing="false" onAction="#browse" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: brown; -fx-background-radius: 10;" text="Browse" textFill="#faf6f6">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="100.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <HBox prefHeight="41.0" prefWidth="478.0">
+               <children>
+                  <Button fx:id="search" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#search" prefHeight="14.0" prefWidth="107.0" style="-fx-background-color: PURPLE; -fx-background-radius: 10;" text="Search" textFill="#f7f6f6">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="save" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#save" prefHeight="14.0" prefWidth="107.0" style="-fx-background-color: PURPLE; -fx-background-radius: 10;" text="Save" textFill="#f7f6f6">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="update" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#update" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: PURPLE; -fx-background-radius: 10;" text="Update" textFill="#f7f6f6">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Delete" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="14.0" prefWidth="107.0" style="-fx-background-color: PURPLE; -fx-background-radius: 10;" text="Delete" textFill="#f7f6f6">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="clear" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#clear" prefHeight="14.0" prefWidth="107.0" style="-fx-background-color: PURPLE; -fx-background-radius: 10;" text="Clear" textFill="#f7f6f6">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

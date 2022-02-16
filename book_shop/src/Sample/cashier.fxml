@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="585.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.Cashier">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="586.0" prefWidth="722.0">
+         <children>
+            <TableView fx:id="cartTable" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="364.0" prefWidth="653.0" style="-fx-background-radius: 10; -fx-border-color: white;" stylesheets="@../Values/Style.css">
+              <columns>
+                <TableColumn fx:id="ItemNo" minWidth="40.0" prefWidth="74.0" text="Item No" />
+                  <TableColumn fx:id="bookTitle" minWidth="5.5999755859375" prefWidth="254.0" text="Book title" />
+                  <TableColumn fx:id="bookQuantity" minWidth="48.800048828125" prefWidth="79.0" text="Quantity" />
+                  <TableColumn fx:id="bookPrice" minWidth="117.5999755859375" prefWidth="124.79998779296875" text="Book Price" />
+                  <TableColumn fx:id="bookPriceTotal" minWidth="20.0" prefWidth="137.60003662109375" text="Total" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="5.0" top="100.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="54.0" prefWidth="489.0">
+               <VBox.margin>
+                  <Insets left="200.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label alignment="TOP_LEFT" prefHeight="20.0" prefWidth="85.0" text="Quantity">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="txtQt" prefHeight="50.0" prefWidth="175.0" />
+                  <Label alignment="CENTER" prefHeight="20.0" prefWidth="66.0" text="Total">
+                     <HBox.margin>
+                        <Insets bottom="15.0" right="20.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtPt" prefHeight="50.0" prefWidth="175.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="64.0" prefWidth="727.0" style="-fx-background-color: #0C284D;">
+               <children>
+                  <Button fx:id="refresh" mnemonicParsing="false" onAction="#refresh" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="Refresh" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="change" mnemonicParsing="false" onAction="#change" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="Change" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="18.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="confirm" mnemonicParsing="false" onAction="#confirm" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="Confirm" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="36.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children></VBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="64.0" prefWidth="722.0" style="-fx-background-color: #0C284D;">
+         <children>
+            <Label prefHeight="30.0" prefWidth="126.0" text="Cashier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="42.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutX="722.0" prefHeight="587.0" prefWidth="329.0" style="-fx-background-color: #FFB6C1;">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="329.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="96.0" text="ORDER ID">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="orderID" prefHeight="31.0" prefWidth="118.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="search" mnemonicParsing="false" onAction="#search" prefHeight="35.0" prefWidth="83.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox prefHeight="564.0" prefWidth="329.0">
+               <children>
+                  <Label text="Name :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="CusName" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="246.0" promptText="Enter your name" style="-fx-background-radius: 10;">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="15.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Tele No :">
+                     <VBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CusTeleNumber" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="246.0" promptText="Enter your contact number" style="-fx-background-radius: 10;">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="15.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Total :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="TotalCheck" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="246.0" promptText="no need to fill" style="-fx-background-radius: 10;">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="15.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Quantity :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="QuantityCheck" maxWidth="-Infinity" prefWidth="246.0" promptText="no need to fill" style="-fx-background-radius: 10;">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="15.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Purchase Date :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="purchaseDate" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="246.0" promptText="no need to update" style="-fx-background-radius: 10;">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="15.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Purchase Time :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="purchaseTime" maxWidth="-Infinity" prefWidth="246.0" style="-fx-background-radius: 10;">
+                     <VBox.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Status :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="status" maxWidth="-Infinity" prefWidth="246.0" style="-fx-background-radius: 10;">
+                     <VBox.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

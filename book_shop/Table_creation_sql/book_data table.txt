@@ -1,0 +1,17 @@
+create database project_data;
+use project_data;
+create table book_data (book_id int primary key ,book_name varchar(45),
+authour varchar(45),category  varchar(45),book_img_src varchar(100),book_price Double,
+book_stock int);
+-- insert into book_data  values (1, "root", "root", "root", "root",1,1);
+
+create table addCartInfo (item_id int primary key,book_name varchar(45),book_quntity int
+,book_price double ,book_tprice double,cart_id int);
+-- insert into addCartInfo  values (1, "root", 1, 1 , 1 ,1);
+
+create table cart_customer (cart_id int primary key,customer_name varchar(45),customer_tele int,
+ total_price double,total_quntity int,purchase_date varchar(45), purchese_time varchar(45),states varchar(45));
+ 
+create table admin (username varchar(50) ,passward varchar(50),keyword varchar(10));
+select * from admin;
+insert into admin values ('a' , 'a', 7896);

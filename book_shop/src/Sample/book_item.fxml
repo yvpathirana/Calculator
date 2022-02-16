@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="bookItem" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="311.0" prefWidth="149.0" stylesheets="@../Values/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.book_item_controller">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="-1.0" layoutY="202.0" prefHeight="11.0" prefWidth="158.0">
+         <children>
+            <Label fx:id="nameLabel" alignment="TOP_CENTER" prefHeight="26.0" prefWidth="119.0" stylesheets="@../Values/Style.css" text="Sakakaruwo" textFill="#262525">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_RIGHT" layoutX="80.0" layoutY="263.0" prefHeight="50.0" prefWidth="69.0">
+         <children>
+            <Button fx:id="addToCart" mnemonicParsing="false" onAction="#addToCart" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: #150A4E; -fx-background-radius: 25;" text="cart" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets right="10.0" />
+               </VBox.margin>
+            </Button>
+         </children></VBox>
+      <ImageView fx:id="bookImg" fitHeight="216.0" fitWidth="140.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true" />
+      <Spinner fx:id="spinner" layoutX="9.0" layoutY="275.0" prefHeight="26.0" prefWidth="59.0" />
+      <VBox alignment="CENTER_RIGHT" layoutX="44.0" layoutY="233.0" prefHeight="30.0" prefWidth="29.0">
+         <children>
+            <Label fx:id="priceType" prefHeight="36.0" prefWidth="22.0" text="LKS">
+               <VBox.margin>
+                  <Insets bottom="1.5" top="2.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" layoutX="67.0" layoutY="236.0" prefHeight="26.0" prefWidth="44.0">
+         <children>
+            <Label fx:id="priceLabel" prefHeight="25.0" prefWidth="36.0" text="300.0">
+               <VBox.margin>
+                  <Insets bottom="1.0" left="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="book-item" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>
